@@ -1,0 +1,39 @@
+.photos{
+    width: 100%;
+    max-width: 880px;
+    height: 743px;
+    margin:4% auto;
+    padding: 0.5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap:10px;
+
+    box-sizing: border-box;
+}
+.photos__grid-item{
+    max-width: 282px;
+    height: 361px;
+    display: ruby;
+    margin-right: 0;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+.photos__image-item{
+    max-width: 282px;
+    height: 282px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.photos_me-gusta{
+    background-color: aliceblue;
+    width: 21px;
+}
+
+.photos__parrafo{
+font-family: Inter;
+font-size: 24px;
+font-weight: 900;
+line-height: 29.05px;
+text-align: left;
+}
