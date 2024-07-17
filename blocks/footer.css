@@ -20,3 +20,9 @@
     box-sizing: border-box;
 
   }
+  @media screen and (max-width: 768px) {
+    .footer__copyright {
+      text-align: center;
+    }
+  }
+
