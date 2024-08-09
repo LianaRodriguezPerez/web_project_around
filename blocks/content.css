@@ -37,7 +37,6 @@
     padding: 0;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
 }
 
 .content__profile-button{
@@ -91,8 +90,9 @@
         
     }
     .content__profile-name{
-        font-size: 36px;
+        font-size: 34px;
         text-overflow: ellipsis;
+        white-space: nowrap;
     }
    
 }

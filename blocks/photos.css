@@ -24,11 +24,12 @@
     object-fit: cover;
 }
 .photos_me-gusta{
-    background-color: aliceblue;
     width: 21px;
+    color: black;
 }
 
 .photos__parrafo{
+color: black;
 font-family: Inter;
 font-size: 24px;
 font-weight: 900;
