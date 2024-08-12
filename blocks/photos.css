@@ -11,11 +11,13 @@
 }
 .photos__grid-item{
     max-width: 282px;
+    flex-direction: column;
     height: 361px;
-    display: ruby;
+    display: flex;
     margin-right: 0;
     background-color: aliceblue;
     border-radius: 10px;
+    position: relative;
 }
 .photos__image-item{
     max-width: 282px;
@@ -25,8 +27,14 @@
 }
 .photos_me-gusta{
     width: 21px;
-    color: black;
+  color: black;
+  position: absolute;
+  bottom: 30px;
+  right: 18px;
+  width: 21px;
+  height: 19px;
 }
+
 
 .photos__parrafo{
 color: black;
@@ -35,6 +43,8 @@ font-size: 24px;
 font-weight: 900;
 line-height: 29.05px;
 text-align: left;
+margin-left: 21px;
+
 }
 
 @media screen and (max-width: 768px) {
