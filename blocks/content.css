@@ -4,7 +4,6 @@
 .content__profile{
     max-width: 880PX;
     display:flex;
-    align-items: self-end;
     margin: auto;
     color: rgba(255, 255, 255, 1);
 
@@ -76,7 +75,7 @@
     .content__profile{
         max-width: 768PX;
         display:flex;
-        flex-direction: column;
+        flex-direction:column;
         justify-content: center;
         align-self: center;
         margin: auto;
@@ -84,12 +83,19 @@
     .content__profile-image{
         margin: auto;
     }
+    .content__profile-datos{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+        align-content: center;
+    }
     .content__profile-parrafo{
         text-align: center;
     }
     .content__profile-editar{
-        margin: auto;
-        width: 100%;
+        margin-top: 3%;
+        width: 60vw;
         max-width: 415px;
         
     }
@@ -98,6 +104,12 @@
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+    .content__profile-button{
+        margin-top: 3%;
+        margin-left: 7%;
+        align-items: center;
+    }
+  
    
 }
 @media screen and (max-width: 320px){
@@ -111,5 +123,9 @@
     justify-content: center;
     align-items: center;
     justify-self: center;
+}
+.content__profile-button{
+    margin-top: 3%;
+    margin-left: 13%;
 }
 }

@@ -78,6 +78,5 @@
 @media screen and (max-width: 408px) {
     .popup__container{
       width: 50%;
-      background-color: aquamarine;
     }
 }
