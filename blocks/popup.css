@@ -14,16 +14,18 @@
     z-index: 1;
 }
 .popup__container{
-    margin: 0 auto;
+    margin: 120PX auto;
     width: 490px;
     height: 390px;  
 }
 .popup__container-close{
+    border: none;
     display: block;
+    background-color: black;
     margin: 0 87% auto;
 }
 .popup__container-close:hover{
-    background:rgba(0, 0, 0, 1);
+    opacity: 0.5;
 
 }
 .popup__container-formulario{

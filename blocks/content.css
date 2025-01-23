@@ -46,6 +46,10 @@
     margin-top: 3%;
     margin-left: 1%;
     cursor: pointer;
+    background: none;
+    color: rgb(255, 255, 255);
+    font-size: 20PX;
+    overflow: hidden;
 }
 .content__profile-parrafo{
     width: 100%;

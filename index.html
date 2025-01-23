@@ -16,98 +16,90 @@
             </header>
             <main class="content">
                 <section class="content__profile"></div>
-                        <img  class="content__profile-image" src="images/image_profile.jpg" alt="Foto Perfil"/>
-                        <div class="content__profile-datos">
-                            <h2 class="content__profile-name"> Jacques Cousteau</h2>
-                            <img  class="content__profile-button" src="images/edit-button.jpg" alt="Editar"/>
-                            <p class="content__profile-parrafo">Explorador</p>
-                        </div>
+                    <img  class="content__profile-image" src="images/image_profile.jpg" alt="Foto Perfil"/>
+                    <div class="content__profile-datos">
+                        <h2 class="content__profile-name"> Jacques Cousteau</h2>
 
-                        <button class="content__profile-editar">
-                            <h2> t </h2>
+                        <button class="content__profile-button"> + </button>
 
-                        </button>
-                        
-                </section>
+                        <p class="content__profile-parrafo">Explorador</p>
+                    </div>
+
+                    <button class="content__profile-editar"> + </button>
+                    
+            </section>
+
+                 </section>
+
                 <section class="popup">
+
                     <div class="popup__container active">
+
                         <button class="popup__container-close">
+
                             <img src="images/button_cerrar.png" alt="cerrar"/>
 
                         </button>
+
                         <form class="popup__container-formulario" >
                             <h2 class="popup__container-editar">Editar Perfil</h2>
 
                             <label for="name" class="popup__container-label"></label>
-                            <input type="text" class="popup__container-name" placeholder="Nombre">
+                            <input type="text" name="name" id="name" class="popup__container-name"  placeholder="Nombre">
 
                             <label for="about" class="popup__container-label"></label>
-                            <input type="text" class="popup__container-about" placeholder="Acerca de mì">
+                            <input type="text" name="about" id="about" class="popup__container-about" placeholder="Acerca de mì">
                             <input type="submit" class="popup__container-save" value="GUARDAR"></input>
     
                         </form>
+
                     </div>
                    
                 </section>
+
                 
                 <section class="popup__add">
-                    <div class="popup__addCard active">
-                        <button class="popup__addCard-close">
-                            <h2>X</h2>
 
-                        </button>
-                        <form class="popup__addCard-form" >
-                            <h2 class="popup__addCard-place">Nuevo Lugar</h2>
+                    <div class="popup__add-div">
 
-                            <label for="name" class="popup__addCard-label"></label>
-                            <input type="text" class="popup__addCard-title" placeholder="Título">
+                        <button id="popup__addCard-close"> X </button>
+                       
+                        <form class="popup__add-form">
 
-                            <label for="about" class="popup__addCard-label"></label>
-                            <input type="text" class="popup__addCard-link" placeholder="Acerca de mì">
-                            <input type="submit" class="popup__addCard-create" value="Crear"></input>
+                            <h2>Nuevo Lugar</h2>
+                            <label for="title__iamgen"></label>
+                            <input type="text" name="title__iamgen" id="title__iamgen" class="popup__addCard-title" placeholder="Título de la imagen">
+                            <label for="link"></label>
+                            <input type="url" name="link" id="link"class="popup__addCard-link" placeholder="URL de la imagen">
+                            <button class="popup__addCard-save"> Crear </button>
+    
                         </form>
+
                     </div>
-                   
+
                 </section>
 
                 <section class="photos">
-                    <div class="photos__grid-item">
-                        <img src="images/image_valledeyosemite.jpg" alt="Valle De Yosemite" class="photos__image-item"/>
-                        <p class="photos__parrafo">Valle de Yosemite</p>
-                        <img src="images/me_gusta.jpg" alt="Me Gusta" class="photos_me-gusta"/>
-                    </div>
-
-                    <div class="photos__grid-item">
-                        <img src="images/image_lagolouise.jpg" alt="Lago Louise" class="photos__image-item"/>
-                        <p class="photos__parrafo">Lago Louise</p>
-                        <img src="images/me_gusta.jpg" alt="Me Gusta" class="photos_me-gusta"/>
-                    </div>
-                    
-                    <div class="photos__grid-item">
-                        <img src="images/image_montañascalvas.jpg" alt="Montañas Clavas" class="photos__image-item"/>
-                        <p class="photos__parrafo">Montañas Calvas</p>
-                        <img src="images/me_gusta.jpg" alt="Me Gusta" class="photos_me-gusta"/>
-                    </div>
-
-                    <div class="photos__grid-item">
-                        <img src="images/image_latemar.jpg" alt="Latemar" class="photos__image-item"/>
-                        <p class="photos__parrafo">Latemar</p>
-                        <img src="images/me_gusta.jpg" alt="Me Gusta" class="photos_me-gusta"/>
-                    </div>
-
-                    <div class="photos__grid-item">
-                        <img src="images/image_vanoisnational.jpg" alt="Vanois National" class="photos__image-item"/>
-                        <p class="photos__parrafo">Vanois National</p>
-                        <img src="images/me_gusta.jpg" alt="Me Gusta" class="photos_me-gusta"/>
-                    </div>
-
-                    <div class="photos__grid-item">
-                        <img src="images/image_lagodibraies.jpg" alt="Lago Di Braies" class="photos__image-item"/>
-                        <p class="photos__parrafo">Lago Di Braies</p>
-                        <img src="images/me_gusta.jpg" alt="Me Gusta" class="photos_me-gusta"/>
-                    </div>
-
+                    <template id="photos-template">
+                        <div class="photo">
+                          <img class="photos__link" src="" alt="">
+                        <div class="photos__div">
+                          <h3 class="photos__name-image"> </h3>
+                          <button class="photo__like"></button>
+                        </div>
+                          <button class="photo__delete"></button>
+                        </div>
+                      </template>
                 </section>
+
+
+                <section class="popup__image">
+                    <div class="popup__image-content">
+                        <img class="popup__image-photo" src="" alt="Imagen ampliada">
+                        <p class="popup__image-caption"></p>
+                        <button class="popup__image-close">&times;</button>
+                    </div>
+                 </section>
 
             </main>
             <footer class="footer">
