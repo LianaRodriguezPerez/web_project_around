@@ -71,12 +71,25 @@
 
 @media screen and (max-width: 768px) {
     .popup__container{
-      width: 80wh;
-      background-color: aquamarine;
+        margin-top: 2%;
+    }
+    .popup__container-formulario{
+        width: 100%;
+        margin: 0%;
+        gap: 0px;
+        opacity: 0px;
+    }
+    .popup__container-close{
+        border: none;
+        display: block;
+        background-color: black;
+        margin: 0 87% auto;
+        font-size: 90px;
     }
 }
+
 @media screen and (max-width: 408px) {
     .popup__container{
-      width: 50%;
+      width: 100%;
     }
 }

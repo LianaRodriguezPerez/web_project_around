@@ -91,3 +91,35 @@
 
 }
 
+@media screen and (max-width: 768px) {
+    .popup__add-form {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        opacity: 0px;
+    }
+    .popup__add-form input{
+        width: 90%;
+    }
+
+    .content__profile-editar{
+        display: fixed;
+        padding: 2px;
+        border: 3px solid #fff;
+        color: #fff;
+        font-size: 30PX;
+    }
+    .popup__addCard-save{
+        width: 80%;
+    }
+    #popup__addCard-close{
+        margin-top: 5%;
+        margin-left: 80%;
+    
+    }
+    #popup__addCard-close:hover{
+        background:rgba(0, 0, 0, 1);
+    
+    }
+
+}

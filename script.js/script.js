@@ -118,7 +118,7 @@ if (inputName && inputUrl) {
 
   guardarPhotos(nuevaImagen);
 
-  ventanaPhoto.style.display = "none";
+  formularioVentanaModal.style.display = "none";
   formularioVentanaModal.reset();
 }
 else{
