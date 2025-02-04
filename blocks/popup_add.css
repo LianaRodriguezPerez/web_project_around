@@ -74,7 +74,7 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 }
-#popup__addCard-close{
+.popup__addCard-close{
     background: none;
     margin-left: 30%;
     border: none;
@@ -86,7 +86,7 @@
     font-size: 30PX;
 
 }
-#popup__addCard-close:hover{
+.popup__addCard-close:hover{
     background:rgba(0, 0, 0, 1);
 
 }

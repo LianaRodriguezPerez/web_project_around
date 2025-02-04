@@ -3,12 +3,13 @@
     const closeWindowProfile=document.querySelector('.popup__container-close');
 
     const openWindowPhoto=document.querySelector('.content__profile-editar');
-    const closeWindowPhoto=document.querySelector('#popup__addCard-close');
+    const closeWindowPhoto=document.querySelector('.popup__addCard-close');
     const WindowPhoto=document.querySelector('.popup__add');
 
     openWindowProfile.addEventListener("click", () => {
         windowPopupProfile.style.display="block";
       });
+
       closeWindowProfile.addEventListener("click", () => {
         windowPopupProfile.style.display="none";
       });
@@ -37,7 +38,6 @@
             nameProfile.textContent= nameValue;
             aboutProfile.textContent=aboutValue;
             formProfile.reset();
-            windowPopupProfile.style.display="none";
             savePopUp();
         }
     }
@@ -88,13 +88,13 @@ function guardarPhotos(card){
 
   const likeButton = userElement.querySelector('.photo__like');
   likeButton.addEventListener('click', () => {
-    // Alternar clase para cambiar el estilo (por ejemplo, color)
+
     likeButton.classList.toggle('photo__like__active');
   });
 
   const deleteButton = userElement.querySelector('.photo__delete');
   deleteButton.addEventListener('click', () => {
-    userElement.remove(); // Elimina la tarjeta del DOM
+    userElement.remove();
   });
 
   contenedorPhoto.prepend(userElement);
@@ -102,6 +102,7 @@ function guardarPhotos(card){
 } ;
 const formularioVentanaModal=document.querySelector('.popup__add-form');
 const crearPhoto=document.querySelector('.popup__addCard-save');
+
 
 formularioVentanaModal.addEventListener('submit', (event) => {
   event.preventDefault(); 
@@ -118,7 +119,7 @@ if (inputName && inputUrl) {
 
   guardarPhotos(nuevaImagen);
 
-  formularioVentanaModal.style.display = "none";
+  WindowPhoto.style.display = 'none';
   formularioVentanaModal.reset();
 }
 else{
