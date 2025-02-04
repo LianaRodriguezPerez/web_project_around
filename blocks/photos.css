@@ -60,15 +60,15 @@
     background-size: contain;
 }
 .photo__like__active {
-    background-image: url(/web_project_around/images/me_gusta_fondo.png);
+    background-image: url(/images/me_gusta_fondo.png);
 }
 .photo__delete {
     position: absolute;
     top: 10px;  
     right: 10px;
     border: none;
-    background-color: transparent;
-    background-image: url(/web_project_around/images/card_deletee.png);
+    background: transparent;
+    background-image: url(/images/card_deletee.png);
     width: 20px;
     height: 20px;
 }
