@@ -38,7 +38,7 @@
             nameProfile.textContent= nameValue;
             aboutProfile.textContent=aboutValue;
             formProfile.reset();
-            savePopUp();
+  
         }
     }
     formProfile.addEventListener("submit", handleProfileFormSubmit);
@@ -97,7 +97,7 @@ function guardarPhotos(card){
     userElement.remove();
   });
 
-  contenedorPhoto.prepend(userElement);
+  contenedorPhoto.append(userElement);
 
 } ;
 const formularioVentanaModal=document.querySelector('.popup__add-form');
@@ -162,7 +162,6 @@ ventanaImage.addEventListener('click', (event) => {
         ventanaImage.style.display = 'none';
     }
 });
-
 
 
 
