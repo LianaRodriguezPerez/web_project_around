@@ -1,0 +1,120 @@
+[33mcommit b1ee5bce86ac3a72ee69e886f63156c55efcf4e8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Mon May 12 10:38:59 2025 -0600
+
+    validate js
+
+[33mcommit 6eddecf37030b9569afa432a573e3b38d208c93a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Mon Apr 14 17:42:02 2025 -0600
+
+    git Merge branch 'main' of https://github.com/LianaRodriguezPerez/web_project_around
+
+[33mcommit 9d968ba5b545001cc72789f519d1ae137b523723[m
+Merge: 998f75b 6e550cd
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Tue Feb 4 17:35:15 2025 -0600
+
+    Modificaciones
+
+[33mcommit 998f75b8140c61fc28594d3f3c5513b323779d20[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Tue Feb 4 17:31:20 2025 -0600
+
+    Modificación like y delete image
+
+[33mcommit 6e550cdd40b8f73ab9f6b958a01b44367e56bd70[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Mon Feb 3 19:06:26 2025 -0600
+
+    Update README.md
+
+[33mcommit 051152411acbeaf9285b1af63e423959ffa221bd[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Mon Feb 3 18:54:39 2025 -0600
+
+    corrección modal js formulario
+
+[33mcommit 16f8e0d740839050b8eac39d2bf522196ac0c937[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Tue Jan 28 18:38:34 2025 -0600
+
+    modificaciones
+
+[33mcommit 7688d52dd241de9c6f2aaca127761d7e06793409[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Thu Jan 23 14:19:55 2025 -0600
+
+    cambios en CSS
+
+[33mcommit 1c7f1eaa744f6304483f35158fdbbb09afeb5eea[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Thu Jan 23 13:51:13 2025 -0600
+
+    Terminar JS
+
+[33mcommit edfe3a5918fd9ffcabe02387d391d81f259d59a5[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Thu Nov 7 22:31:42 2024 -0600
+
+    Añadi segunda ventana modal
+
+[33mcommit fc2ea35e2079b933ae78da52f840b53595c632fc[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Thu Nov 7 18:55:05 2024 -0600
+
+    ventana modal
+
+[33mcommit 7891d9c347dbef7676a93b629fac01bb63d2cb9d[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Mon Aug 12 13:03:36 2024 -0600
+
+    corección photos.css
+
+[33mcommit 898ceb3fd12de7af62df7b56f659dc621beb91e2[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Fri Aug 9 08:34:33 2024 -0600
+
+    correcciones de profile-name
+
+[33mcommit 9a16861d31b28c7df6cef49842d93e50037ec8b0[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Wed Aug 7 19:59:19 2024 -0600
+
+    correcciòn js
+
+[33mcommit 2ac7497c821dc98ec7904e40cce49becb05ada08[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Sat Aug 3 20:20:31 2024 -0600
+
+    js
+
+[33mcommit 60541d6a777189ad41a04668daf71606c7118173[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Tue Jul 16 22:29:36 2024 -0600
+
+    Finalizaciòn html
+
+[33mcommit 2982d250c49edbb107ea9d6a53e0fa35f5e8a6dd[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Sun Jul 14 14:10:54 2024 -0600
+
+    finalizaciòn parte html 1280
+
+[33mcommit 4a4ef5828eaee833da7930012dc67f7a783b1704[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Fri Jul 12 12:11:13 2024 -0600
+
+    Se agrego files
+
+[33mcommit 5401751ee8c9ae08a06cc80238271cbd9cc8d849[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Fri Jul 12 12:03:15 2024 -0600
+
+    Creaciòn de carpetas
+
+[33mcommit 1b2474fe352a3c908081a9c45bf1edbbc9873634[m
+Author: LianaRodriguezPerez <lemanerp@gmail.com>
+Date:   Fri Jul 12 11:33:12 2024 -0600
+
+    Initial commit
