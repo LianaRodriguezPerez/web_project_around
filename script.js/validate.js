@@ -1,45 +1,38 @@
 console.log("archivo vinculado");
 
-const formElement = document.querySelector(".popup__form");
-const formInput = formElement.querySelector(".popup__input");
-console.log(formInput.id);
-const formError = formElement.querySelector(`.${formInput.id}-error`);
-console.log(formError, "ERROR");
+const forms = document.querySelectorAll(".popup__form");
 
+forms.forEach((form) => {
+  form.addEventListener("submit", function (evt) {
+    evt.preventDefault(); // Evita el reinicio de la página
+    console.log("Formulario enviado sin recargar la página");
+  });
 
-const showInputError = (element) => {
-  element.classList.add("form__input_type_error");
-  console.log("muestra el error")
-  formError.classList.add("form__input-error_active");
-};
-const hideInputError = (element) => {
-  element.classList.remove("form__input_type_error");
-  console.log("muestra el error")
-  formError.classList.add("form__input-error_active");
-};
+  const inputs = form.querySelectorAll(".popup__input");
 
-const isValid = () =>{
-  if(!formInput.validity.valid){
-    showInputError(formInput);
-  }else{
-    hideInputError(formInput)
-  }
-}
+  inputs.forEach((input) => {
+    input.addEventListener("input", () => {
+      const errorSpan = document.querySelector(`.${input.id}-error`);
+      input.setCustomValidity(""); // Limpiar mensaje anterior
 
-
-
-formElement.addEventListener("submit", function (evt){
-  evt.preventDefault();
-  console.log("No se reinicia la pagina")
+      if (!input.validity.valid) {
+        if (input.validity.valueMissing) {
+          input.setCustomValidity("Este campo es obligatorio.");
+        } else if (input.validity.tooShort) {
+          input.setCustomValidity(
+            `Debe tener al menos ${input.minLength} caracteres.`
+          );
+        } else if (input.validity.tooLong) {
+          input.setCustomValidity(
+            `Debe tener como máximo ${input.maxLength} caracteres.`
+          );
+        } else if (input.validity.typeMismatch && input.type === "email") {
+          input.setCustomValidity("Introduce un correo electrónico válido.");
+        }
+        errorSpan.textContent = input.validationMessage;
+      } else {
+        errorSpan.textContent = "";
+      }
+    });
+  });
 });
-
-formInput.addEventListener("input", function (evt) {
-  console.log(evt.target.validity);
-  console.log("si funciona")
-});
-
-formInput.addEventListener("Input se ejecuta", isValid);
-
-
-
-

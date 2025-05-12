@@ -1,150 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Alrededor de los EEUU">
-        <meta name="keywords" content="html, css, javascript">
-        <meta name="author" content="Lia Rodriguez">
-        <title> Alrededor de los EEUU </title>
-        <link rel="stylesheet" href="./pages/index.css" />
-    </head>
-        <body class="page">
-            <header class="header">
-                <img  class="header_logo" src="images/logo.jpg" alt="Logo"/>
-                <hr>
-            </header>
-            <main class="content">
-                <section class="content__profile"></div>
-                    <img  class="content__profile-image" src="images/image_profile.jpg" alt="Foto Perfil"/>
-                    <div class="content__profile-datos">
-                        <h2 class="content__profile-name"> Jacques Cousteau</h2>
-                        <p class="content__profile-parrafo">Explorador</p>
-                    </div>
-                    <button class="content__profile-button"> &#x29FE </button>
-                    <button class="content__profile-editar"> + </button>
-                    
-                    
-                    
-            </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Alrededor de los EEUU" />
+    <meta name="keywords" content="html, css, javascript" />
+    <meta name="author" content="Lia Rodriguez" />
+    <title>Alrededor de los EEUU</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <img class="header_logo" src="images/logo.jpg" alt="Logo" />
+      <hr />
+    </header>
+    <main class="content">
+      <section class="content__profile">
+        <img
+          class="content__profile-image"
+          src="images/image_profile.jpg"
+          alt="Foto Perfil"
+        />
+        <div class="content__profile-datos">
+          <h2 class="content__profile-name">Jacques Cousteau</h2>
+          <p class="content__profile-parrafo">Explorador</p>
+        </div>
+        <button class="content__profile-button">Button</button>
+        <button class="content__profile-editar">+</button>
+      </section>
 
-                 </section>
+      <section class="popup">
+        <div class="popup__container active">
+          <button class="popup__container-close">
+            <img src="images/button_cerrar.png" alt="cerrar" />
+          </button>
 
-                <section class="popup">
+          <form
+            class="popup__container-formulario popup__form"
+            novalidate
+            name="form1"
+          >
+            <h2 class="popup__container-editar">Editar Perfil</h2>
 
-                    <div class="popup__container active">
+            <label for="name" class="popup__container-label"></label>
+            <input
+              type="text"
+              name="name"
+              id="name-input"
+              class="popup__container-name popup__input"
+              placeholder="Nombre"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+            <span class="form__input-error name-input-error"></span>
 
-                        <button class="popup__container-close">
+            <label for="about" class="popup__container-label"></label>
+            <input
+              type="text"
+              name="about"
+              id="about-input"
+              class="popup__container-about popup__input"
+              placeholder="Acerca de mì"
+              minlength="2"
+              maxlength="200"
+              required
+            />
+            <span class="form__input-error about-input-error"></span>
 
-                            <img src="images/button_cerrar.png" alt="cerrar"/>
+            <input
+              type="submit"
+              class="popup__container-save"
+              value="GUARDAR"
+            />
+          </form>
+        </div>
+      </section>
 
-                        </button>
+      <section class="popup__add">
+        <div class="popup__add-div">
+          <button class="popup__addCard-close">&times;</button>
 
-                        <form class="popup__container-formulario popup__form"  novalidate name="form1">
+          <form class="popup__add-form popup__form" name="form2" novalidate>
+            <h2 class="popup__container-editar">Nuevo Lugar</h2>
 
-                            <h2 class="popup__container-editar">Editar Perfil</h2>
+            <label for="title__iamgen"></label>
+            <input
+              type="text"
+              name="title__iamgen"
+              id="title__imagen"
+              class="popup__addCard-title popup__input"
+              placeholder="Título de la imagen"
+              minlength="2"
+              maxlength="30"
+              required
+            />
+            <span class="form__input-error title__imagen-error"></span>
 
-                            <label for="name" class="popup__container-label"></label>
-                            <input 
-                                type="text" 
-                                name="name" 
-                                id="name-input" 
-                                class="popup__container-name popup__input"  
-                                placeholder="Nombre"
-                                minlength="2"
-                                maxlength="40"
-                                required>
-                            <span class="form__input-error name-input-error"></span>
+            <label for="link"></label>
+            <input
+              type="url"
+              name="link"
+              id="link"
+              class="popup__addCard-link popup__input"
+              placeholder="URL de la imagen"
+            />
+            <span class="form__input-error link-error"></span>
 
-                            <label for="about" class="popup__container-label"></label>
-                            <input 
-                                type="text" 
-                                name="about" 
-                                id="about-input" 
-                                class="popup__container-about popup__input" 
-                                placeholder="Acerca de mì"
-                                minlength="2"
-                                maxlength="200"
-                                required>
-                            <span class="form__input-error about-input-error"></span>
+            <button class="popup__addCard-save">Crear</button>
+          </form>
+        </div>
+      </section>
 
+      <section class="photos">
+        <template id="photos-template">
+          <div class="photo">
+            <img class="photos__link" src="" alt="" />
+            <div class="photos__div">
+              <h3 class="photos__name-image"></h3>
+              <button class="photo__like"></button>
+            </div>
+            <button class="photo__delete"></button>
+          </div>
+        </template>
+      </section>
 
-                            <input type="submit" class="popup__container-save" value="GUARDAR"></input>
-    
-                        </form>
-
-                    </div>
-                   
-                </section>
-
-                
-                <section class="popup__add">
-
-                    <div class="popup__add-div">
-
-                        <button class="popup__addCard-close"> &times; </button>
-                       
-                        <form class="popup__add-form popup__form" name="form2" novalidate>
-
-                            <h2>Nuevo Lugar</h2>
-
-                            <label for="title__iamgen"></label>
-                            <input 
-                                type="text" 
-                                name="title__iamgen" 
-                                id="title__imagen" 
-                                class="popup__addCard-title popup__input" 
-                                placeholder="Título de la imagen"
-                                minlength="2"
-                                maxlength="30"
-                                required>
-                            <span class="form__input-error title__imagen-error"></span>
-
-                            <label for="link"></label>
-                            <input 
-                                type="url" 
-                                name="link" 
-                                id="link"
-                                class="popup__addCard-link popup__input" 
-                                placeholder="URL de la imagen">
-                            <span class="form__input-error  link-error"></span>
-
-                            <button class="popup__addCard-save"> Crear </button>
-    
-                        </form>
-
-                    </div>
-
-                </section>
-
-                <section class="photos">
-                    <template id="photos-template">
-                        <div class="photo">
-                          <img class="photos__link" src="" alt="">
-                        <div class="photos__div">
-                          <h3 class="photos__name-image"> </h3>
-                          <button class="photo__like"></button>
-                        </div>
-                          <button class="photo__delete"></button>
-                        </div>
-                      </template>
-                </section>
-
-
-                <section class="popup__image">
-                    <div class="popup__image-content">
-                        <img class="popup__image-photo" src="" alt="Imagen ampliada">
-                        <p class="popup__image-caption"></p>
-                        <button class="popup__image-close">&times;</button>
-                    </div>
-                 </section>
-
-            </main>
-            <footer class="footer">
-                <p class="footer__copyright">&#169; 2024 Around The U.S.</p>
-            </footer>
-            <script src="script.js/script.js"></script>
-            <script src="script.js/validate.js"></script>
-        </body>
-    
+      <section class="popup__image">
+        <div class="popup__image-content">
+          <img class="popup__image-photo" src="" alt="Imagen ampliada" />
+          <p class="popup__image-caption"></p>
+          <button class="popup__image-close">&times;</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">&#169; 2024 Around The U.S.</p>
+    </footer>
+    <script src="script.js/script.js"></script>
+    <script src="script.js/validate.js"></script>
+  </body>
 </html>
