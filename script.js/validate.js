@@ -3,18 +3,20 @@ console.log("archivo vinculado");
 const forms = document.querySelectorAll(".popup__form");
 
 forms.forEach((form) => {
+  const inputs = form.querySelectorAll(".popup__input");
+
   form.addEventListener("submit", function (evt) {
     evt.preventDefault(); // Evita el reinicio de la página
     console.log("Formulario enviado sin recargar la página");
+    // form.submit();
+    console.log("envio de formularios");
   });
-
-  const inputs = form.querySelectorAll(".popup__input");
 
   inputs.forEach((input) => {
     input.addEventListener("input", () => {
       const errorSpan = document.querySelector(`.${input.id}-error`);
-      input.setCustomValidity(""); // Limpiar mensaje anterior
 
+      input.setCustomValidity(""); // Limpiar mensaje anterior
       if (!input.validity.valid) {
         if (input.validity.valueMissing) {
           input.setCustomValidity("Este campo es obligatorio.");

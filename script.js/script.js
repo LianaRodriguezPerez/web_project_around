@@ -56,11 +56,9 @@ function handleProfileFormSubmit(evt) {
   const nameValue = nameInputProfile.value;
   const aboutValue = aboutInputProfile.value;
 
-  if (nameValue && aboutValue) {
-    nameProfile.textContent = nameValue;
-    aboutProfile.textContent = aboutValue;
-    formProfile.reset();
-  }
+  nameProfile.textContent = nameValue;
+  aboutProfile.textContent = aboutValue;
+  windowPopupProfile.style.display = "none";
 }
 formProfile.addEventListener("submit", handleProfileFormSubmit);
 
@@ -116,7 +114,7 @@ function guardarPhotos(card) {
     userElement.remove();
   });
 
-  contenedorPhoto.append(userElement);
+  contenedorPhoto.prepend(userElement);
 }
 const formularioVentanaModal = document.querySelector(".popup__add-form");
 const crearPhoto = document.querySelector(".popup__addCard-save");
