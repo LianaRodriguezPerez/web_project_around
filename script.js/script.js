@@ -91,11 +91,11 @@ const initialCards = [
 
 const contenedorPhoto = document.querySelector(".photos");
 
-function inicializarPhotos() {
-  initialCards.forEach(guardarPhotos);
+function createInitialCards() {
+  initialCards.forEach(createCard);
 }
 
-function guardarPhotos(card) {
+function createCard(card) {
   const userTemplate = document.querySelector("#photos-template").content;
   const userElement = userTemplate.querySelector(".photo").cloneNode(true);
 
@@ -131,7 +131,7 @@ formularioVentanaModal.addEventListener("submit", (event) => {
 
     initialCards.unshift(nuevaImagen);
 
-    guardarPhotos(nuevaImagen);
+    createCard(nuevaImagen);
 
     WindowPhoto.style.display = "none";
     formularioVentanaModal.reset();
@@ -139,16 +139,16 @@ formularioVentanaModal.addEventListener("submit", (event) => {
     alert("Por favor, completa ambos campos: nombre y URL de la imagen.");
   }
 });
-inicializarPhotos();
+createInitialCards();
 
-const contenedorPhotos = document.querySelector(".photos");
+const cardContainer = document.querySelector(".photos");
 const ventanaImage = document.querySelector(".popup__image");
 const imagenAmpliada = document.querySelector(".popup__image-photo");
 const captionAmpliada = document.querySelector(".popup__image-caption");
 const cerrarImagen = document.querySelector(".popup__image-close");
 
 // Abrir la ventana emergente al hacer clic en una imagen
-contenedorPhotos.addEventListener("click", (event) => {
+cardContainer.addEventListener("click", (event) => {
   const target = event.target;
 
   if (target.classList.contains("photos__link")) {
