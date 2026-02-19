@@ -20,7 +20,9 @@ En este proyecto se utilizaron las siguientes herramientas de desarrollo web:
         - Arrays
         - Condiciones y Bucles
         - Funciones
-        - Manejo del DOM                                                                         
+        - Manejo del DOM
+        - Clases
+        - Exportar e importar                                                                         
    * Git: Para el control de versiones y gestión de ramas, permitiendo un desarrollo organizado y colaborativo.
    * Git Hub: Plataforma para alojar proyectos utilizando el sistema de control de versiones Git.
    * Figma: Herramienta online de diseño colaborativo que permite a los diseñadores crear, editar y compartir diseños de interfaz de usuario.
