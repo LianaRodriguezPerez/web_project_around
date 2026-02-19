@@ -1,47 +1,25 @@
-const openWindowProfile = document.querySelector(".content__profile-button");
-const windowPopupProfile = document.querySelector(".popup");
-const closeWindowProfile = document.querySelector(".popup__container-close");
+import { Card } from "./card";
+import { handleFormSubmit } from "./formValidator";
+import { initPopus } from "./popup";
+import { initialCards } from "./utils";
 
-const openWindowPhoto = document.querySelector(".content__profile-editar");
-const closeWindowPhoto = document.querySelector(".popup__addCard-close");
-const WindowPhoto = document.querySelector(".popup__add");
+initPopus();
 
-// Abrir ventanas
-openWindowProfile.addEventListener("click", () => {
-  windowPopupProfile.style.display = "block";
-});
+const contenedorPhoto = document.querySelector(".photos");
 
-openWindowPhoto.addEventListener("click", () => {
-  WindowPhoto.style.display = "block";
-});
+function createInitialCards() {
+  initialCards.forEach((item) => {
+    const card = new Card(item, "#photos-template");
+    const cardElement = card.generateCard();
+    contenedorPhoto.prepend(cardElement);
+  });
+}
+createInitialCards();
+const formElement = document.querySelector(".popup__form");
 
-// Cerrar ventanas con botón
-closeWindowProfile.addEventListener("click", () => {
-  windowPopupProfile.style.display = "none";
-});
-
-closeWindowPhoto.addEventListener("click", () => {
-  WindowPhoto.style.display = "none";
-});
-
-// Cerrar al hacer clic en la superposición
-windowPopupProfile.addEventListener("click", (e) => {
-  if (e.target === windowPopupProfile) {
-    windowPopupProfile.style.display = "none";
-  }
-});
-
-WindowPhoto.addEventListener("click", (e) => {
-  if (e.target === WindowPhoto) {
-    WindowPhoto.style.display = "none";
-  }
-});
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    windowPopupProfile.style.display = "none";
-    WindowPhoto.style.display = "none";
-  }
+handleFormSubmit(formElement, (data) => {
+  const cardElement = createCardInstance(data);
+  contenedorPhoto.prepend(cardElement);
 });
 
 const formProfile = document.querySelector(".popup__container-formulario");
@@ -61,85 +39,6 @@ function handleProfileFormSubmit(evt) {
   windowPopupProfile.style.display = "none";
 }
 formProfile.addEventListener("submit", handleProfileFormSubmit);
-
-const initialCards = [
-  {
-    name: "Valle de Yosemite",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg",
-  },
-  {
-    name: "Lago Louise",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lake-louise.jpg",
-  },
-  {
-    name: "Montañas Calvas",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/bald-mountains.jpg",
-  },
-  {
-    name: "Latemar",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/latemar.jpg",
-  },
-  {
-    name: "Parque Nacional de la Vanoise",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/vanoise.jpg",
-  },
-  {
-    name: "Lago di Braies",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg",
-  },
-];
-
-const contenedorPhoto = document.querySelector(".photos");
-
-function createInitialCards() {
-  initialCards.forEach(createCard);
-}
-
-function createCard(card) {
-  const userTemplate = document.querySelector("#photos-template").content;
-  const userElement = userTemplate.querySelector(".photo").cloneNode(true);
-
-  userElement.querySelector(".photos__link").src = card.link;
-  userElement.querySelector(".photos__link").alt = card.name;
-
-  userElement.querySelector(".photos__name-image").textContent = card.name;
-
-  const likeButton = userElement.querySelector(".photo__like");
-  likeButton.addEventListener("click", () => {
-    likeButton.classList.toggle("photo__like__active");
-  });
-
-  const deleteButton = userElement.querySelector(".photo__delete");
-  deleteButton.addEventListener("click", () => {
-    userElement.remove();
-  });
-
-  contenedorPhoto.prepend(userElement);
-}
-const formularioVentanaModal = document.querySelector(".popup__add-form");
-const crearPhoto = document.querySelector(".popup__addCard-save");
-
-formularioVentanaModal.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const inputName = document.querySelector(".popup__addCard-title").value;
-  const inputUrl = document.querySelector(".popup__addCard-link").value;
-
-  if (inputName && inputUrl) {
-    // Crear un nuevo objeto de imagen
-    const nuevaImagen = { link: inputUrl, name: inputName };
-
-    initialCards.unshift(nuevaImagen);
-
-    createCard(nuevaImagen);
-
-    WindowPhoto.style.display = "none";
-    formularioVentanaModal.reset();
-  } else {
-    alert("Por favor, completa ambos campos: nombre y URL de la imagen.");
-  }
-});
-createInitialCards();
 
 const cardContainer = document.querySelector(".photos");
 const ventanaImage = document.querySelector(".popup__image");

@@ -13,6 +13,10 @@
   height: 100vh;
   z-index: 1;
 }
+.popup_opened {
+  display: block;
+}
+
 .popup__container {
   margin: 120px auto;
   width: 490px;
