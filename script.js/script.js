@@ -1,7 +1,7 @@
-import { Card } from "./card";
-import { handleFormSubmit } from "./formValidator";
-import { initPopus } from "./popup";
-import { initialCards } from "./utils";
+import { Card } from "./card.js";
+import { handleFormSubmit } from "./formValidator.js";
+import { initPopus } from "./popup.js";
+import { initialCards } from "./utils.js";
 
 initPopus();
 
